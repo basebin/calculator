@@ -77,3 +77,13 @@ The relevant logic is in [`Main.hs`](Main.hs).
 - [`Main.hs`](Main.hs): GTK application, calculator UI, app actions
 - [`scripts/create-bundle.sh`](scripts/create-bundle.sh): macOS `.app` packaging
 - [`hello-gtk.cabal`](hello-gtk.cabal): package metadata and dependencies
+
+## Test
+
+This is a test change.
+Another test line.
+Small change.
+README tweak.
+Branch check.
+Trigger check.
+Refresh check.
