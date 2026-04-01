@@ -1,3 +1,4 @@
+---
 name: Bump Version
 
 on:
@@ -12,8 +13,8 @@ permissions:
 
 jobs:
   bump:
-    runs-on: macos-latest
-    
+    runs-on: macos-lates
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,18 +24,18 @@ jobs:
         run: |
           OLD_VERSION=$(grep -E "^version:" hello-gtk.cabal | awk '{print $2}')
           NEW_VERSION="${{ github.event.inputs.version }}"
-          
+
           sed -i '' "s/version:             $OLD_VERSION/version:             $NEW_VERSION/" hello-gtk.cabal
-          
+
           echo "Updated version from $OLD_VERSION to $NEW_VERSION"
 
       - name: Commit and push
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
+
           git add hello-gtk.cabal
           git commit -m "chore: bump version to ${{ github.event.inputs.version }}"
-          
+
           git tag "v${{ github.event.inputs.version }}"
           git push origin main "v${{ github.event.inputs.version }}"

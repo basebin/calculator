@@ -1,3 +1,4 @@
+---
 name: Release
 
 on:
@@ -10,8 +11,8 @@ permissions:
 
 jobs:
   build:
-    runs-on: macos-latest
-    
+    runs-on: macos-lates
+
     steps:
       - uses: actions/checkout@v4
 
@@ -19,7 +20,7 @@ jobs:
         run: |
           brew install ghc cabal-install gtk4 gobject-introspection
           cabal update
-      
+
       - name: Build
         run: cabal build hello-gtk
 
