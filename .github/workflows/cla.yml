@@ -9,14 +9,18 @@ on:
 jobs:
   cla:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: "CLA Assistant"
-        if: (github.event.comment.body == 'recheck' || github.event.action == 'opened' || github.event.action == 'synchronize')
-        uses: contributor-assistant/github-action@v2.5.0
+        if: (github.event.comment.body == 'recheck' || github.event.comment.body == 'I have read the CLA Document and I hereby sign the CLA' || github.event.action == 'opened' || github.event.action == 'synchronize')
+        uses: cla-assistant/github-action@v2.6.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path-to-signatures: 'cla-signatures.json'
           path-to-document: 'https://github.com/bniladridas/calculator/blob/main/CLA.md'
           branch: 'main'
           allowlist: 'dependabot[bot],github-actions[bot]'
-          bot-user: 'github-actions[bot]'
-          minimum-confidence: 0.9
+          custom-pr-sign-comment: 'I have read the CLA Document and I hereby sign the CLA'
