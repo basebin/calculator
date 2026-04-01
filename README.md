@@ -77,3 +77,9 @@ The relevant logic is in [`Main.hs`](Main.hs).
 - [`Main.hs`](Main.hs): GTK application, calculator UI, app actions
 - [`scripts/create-bundle.sh`](scripts/create-bundle.sh): macOS `.app` packaging
 - [`hello-gtk.cabal`](hello-gtk.cabal): package metadata and dependencies
+
+## Contributing
+
+Contributions are welcome. By contributing you agree to the Contributor License Agreement in [`CLA.md`](CLA.md).
+
+When you open a pull request, the repository CLA workflow checks the PR and posts instructions if a manual sign-off comment is required.
