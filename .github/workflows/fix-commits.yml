@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   fix:
     runs-on: ubuntu-latest
@@ -15,17 +18,10 @@ jobs:
 
       - name: Fix commit messages
         run: |
-          git filter-branch -f --msg-filter '
-          commit_msg=$(cat)
-          commit_msg=$(echo "$commit_msg" | sed "s/ add / /g")
-          commit_msg=$(echo "$commit_msg" | sed "s/^add /")
-          echo "$commit_msg"
-          ' HEAD~1..HEAD || true
+          git filter-branch -f --msg-filter 'commit_msg=$(cat); commit_msg=$(echo "$commit_msg" | sed "s/ add / /g"); commit_msg=$(echo "$commit_msg" | sed "s/^add //"); echo "$commit_msg"' HEAD~1..HEAD || true
 
       - name: Force push if changed
         run: |
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse origin/main)" ]; then
             git push --force origin main
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
