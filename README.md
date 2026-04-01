@@ -4,7 +4,7 @@
 
 <img src="https://raw.githubusercontent.com/bniladridas/calculator/main/GUI/app-icon.png" width="64" style="border-radius:12px;box-shadow:0 2px 4px rgba(0,0,0,0.2);" align="right">
 
-**Version:** ![Latest Release](https://img.shields.io/github/v/tag/bniladridas/calculator)
+**Version:** ![Latest Release](https://img.shields.io/github/v/release/bniladridas/calculator)
 
 **Download:** [Latest Release](https://github.com/bniladridas/calculator/releases/latest)
 
