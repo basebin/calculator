@@ -4,12 +4,6 @@ on:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Release tag (e.g., v0.1.2.0)'
-        required: true
-        default: 'v0.1.2.0'
 
 permissions:
   contents: write
@@ -17,20 +11,9 @@ permissions:
 jobs:
   build:
     runs-on: macos-latest
-    outputs:
-      version: ${{ steps.version.outputs.tag }}
     
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set version
-        id: version
-        run: |
-          TAG="${{ github.event.inputs.tag }}"
-          if [ -z "$TAG" ]; then
-            TAG="${{ github.ref_name }}"
-          fi
-          echo "tag=$TAG" >> $GITHUB_OUTPUT
 
       - name: Install dependencies
         run: |
@@ -48,7 +31,6 @@ jobs:
 
       - name: Create Release
         run: |
-          VERSION="${{ steps.version.outputs.tag }}"
-          gh release create "$VERSION" Calculator.zip --title "Calculator $VERSION" --notes "Download the macOS app bundle"
+          gh release create "${{ github.ref_name }}" Calculator.zip --title "Calculator ${{ github.ref_name }}" --notes "Download the macOS app bundle"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

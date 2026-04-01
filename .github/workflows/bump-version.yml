@@ -6,11 +6,6 @@ on:
       version:
         description: 'New version (e.g., 0.1.3.0)'
         required: true
-      create_tag:
-        description: 'Create git tag'
-        required: false
-        default: 'true'
-        type: boolean
 
 permissions:
   contents: write
@@ -41,9 +36,5 @@ jobs:
           git add hello-gtk.cabal
           git commit -m "chore: bump version to ${{ github.event.inputs.version }}"
           
-          if [ "${{ github.event.inputs.create_tag }}" = "true" ]; then
-            git tag "v${{ github.event.inputs.version }}"
-            git push origin main "v${{ github.event.inputs.version }}" --no-verify
-          else
-            git push origin main --no-verify
-          fi
+          git tag "v${{ github.event.inputs.version }}"
+          git push origin main "v${{ github.event.inputs.version }}"
