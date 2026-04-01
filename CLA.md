@@ -8,4 +8,10 @@ By contributing to this project, you agree to the following:
 
 ## How to Sign
 
-When you open a pull request, the CLA Assistant bot will comment with a link. Click to sign the CLA electronically.
+When you open a pull request, the CLA workflow will comment with instructions.
+
+To sign, reply on the pull request with this exact text:
+
+`I have read the CLA Document and I hereby sign the CLA`
+
+If needed, comment `recheck` after signing to rerun the CLA check.
