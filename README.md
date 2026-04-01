@@ -4,7 +4,7 @@
 
 <img src="https://raw.githubusercontent.com/bniladridas/calculator/main/GUI/app-icon.png" width="64" style="border-radius:12px;box-shadow:0 2px 4px rgba(0,0,0,0.2);" align="right">
 
-**Version:** 0.1.2.0
+**Version:** 0.1.3.0
 
 **Download:** [Latest Release](https://github.com/bniladridas/calculator/releases/latest)
 
@@ -17,10 +17,6 @@ A small calculator built with `haskell-gi`, `GTK4`, and `Gio`.
 | Main Window | About Dialog |
 |:--:|:--:|
 | <img src="https://raw.githubusercontent.com/bniladridas/calculator/main/GUI/calculator-main-window.png" width="260"> | <img src="https://raw.githubusercontent.com/bniladridas/calculator/main/GUI/calculator-about-dialog.png" width="260"> |
-
-| App In Applications |
-|:--:|
-| <img src="https://raw.githubusercontent.com/bniladridas/calculator/main/GUI/calculator-applications-view.png" width="520"> |
 
 ## Build
 
