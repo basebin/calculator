@@ -67,6 +67,9 @@ cabal run hello-gtk</pre>
         <h2>App Bundle</h2>
         <pre>./scripts/create-bundle.sh
 open Calculator.app</pre>
+
+        <h2>Automation</h2>
+        <p>The project uses GitHub Actions for CI/CD. There is a release workflow that builds and creates GitHub releases automatically when a version tag is pushed. A bump version workflow updates the version in the cabal file and creates a git tag which triggers the release. A fix commits workflow runs on every push to main and ensures commit messages do not contain the word "add" by rewriting them if needed.</p>
     </div>
 </body>
 </html>
