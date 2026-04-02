@@ -1,6 +1,6 @@
 # calculator
 
-[![Release](https://img.shields.io/github/actions/workflow/status/bniladridas/calculator/release.yml?label=release)](https://github.com/bniladridas/calculator/actions)
+[![Release](https://img.shields.io/github/actions/workflow/status/bniladridas/calculator/release.yml?label=release&event=push)](https://github.com/bniladridas/calculator/actions)
 
 <img src="https://raw.githubusercontent.com/bniladridas/calculator/main/GUI/app-icon.png" width="64" style="border-radius:12px;box-shadow:0 2px 4px rgba(0,0,0,0.2);" align="right">
 
