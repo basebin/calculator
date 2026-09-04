@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/basebin/calculator/main/.github/assets/thumbnail.png" alt="calculator" width="100%">
+</p>
+
 # calculator
 
 [![Release](https://img.shields.io/github/actions/workflow/status/bniladridas/calculator/release.yml?label=release)](https://github.com/bniladridas/calculator/actions)
