@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/basebin/calculator/main/.github/assets/thumbnail.png" alt="calculator" width="100%">
+  <img src="https://raw.githubusercontent.com/Coccinella-Labs/calculator/main/.github/assets/thumbnail.png" alt="calculator" width="100%">
 </p>
 
 # calculator
